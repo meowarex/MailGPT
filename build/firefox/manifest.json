@@ -1,0 +1,39 @@
+{
+    "name": "MailGPT",
+    "description": "Display ChatGPT response as a suggestion to complete emails",
+    "version": "1.0.2",
+    "manifest_version": 2,
+    "icons": {
+        "16": "logo.png",
+        "32": "logo.png",
+        "48": "logo.png",
+        "128": "logo.png"
+    },
+    "permissions": [
+        "storage",
+        "https://mail.google.com/*",
+        "https://*.openai.com/"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "css": [
+                "content-script.css"
+            ],
+            "matches": [
+                "https://mail.google.com/*"
+            ],
+            "js": [
+                "content-script.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
