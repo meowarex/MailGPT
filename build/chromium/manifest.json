@@ -1,7 +1,7 @@
 {
     "name": "MailGPT",
     "description": "Display ChatGPT response as a suggestion to complete emails",
-    "version": "1.0.0",
+    "version": "1.0.37",
     "manifest_version": 3,
     "icons": {
         "16": "logo.png",
